@@ -54,7 +54,7 @@
     <input id="autocomplete" placeholder="Enter address" type="text" />
     <div id="result">Waiting for address input...</div>
   </div>
-  <div id="map"></div>
+  <div id="map"style="display: none;"></div>
 
   <script
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDTfb2PJ_rLqfAah7aMx97piRBlZn3lNCg&libraries=places,geometry&callback=initMap"
@@ -116,8 +116,8 @@
 
         const isInside = google.maps.geometry.poly.containsLocation(location, polygon);
         resultBox.textContent = isInside
-          ? "✅ This address IS within the zone."
-          : "❌ This address is NOT within the zone.";
+          ? "✅ We service your area!"
+          : "❌ Unfortunately you are outside our bounds, but we are working on growing our services.";
       });
     }
   </script>
